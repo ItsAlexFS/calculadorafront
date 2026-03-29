@@ -7,7 +7,9 @@ const initialState = {
     error: null
 }
 
-const API_URL = 'https://calculadoragastos-qftn.onrender.com'
+const API_URL = import.meta.env.DEV
+    ? '/api/movimientos'
+    : 'https://calculadoragastos-qftn.onrender.com/api/movimientos'
 export const GlobalContext = createContext(initialState)
 export const GlobalProvider = ({children}) => {
     const [state, dispatch] = useReducer(AppReducer, initialState)
