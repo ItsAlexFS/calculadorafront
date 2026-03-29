@@ -7,7 +7,7 @@ const initialState = {
     error: null
 }
 
-const API_URL = 'https://gastos-backa.onrender.com/api/movimientos'
+const API_URL = 'https://calculadoragastos-qftn.onrender.com'
 export const GlobalContext = createContext(initialState)
 export const GlobalProvider = ({children}) => {
     const [state, dispatch] = useReducer(AppReducer, initialState)
